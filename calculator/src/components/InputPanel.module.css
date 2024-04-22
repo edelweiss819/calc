@@ -6,9 +6,18 @@
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 
-    width: 20.938rem;
-    height: 20.938rem;
-
+    /*width: 20.938rem;*/
+    /*height: 20.938rem;*/
+    align-items: center;
     font-size: 2rem;
+}
+
+.dark-theme {
+    background-color: var(--dark-background);
     color: var(--white);
+}
+
+.light-theme {
+    background-color: var(--light-background);
+    color: var(--black);
 }

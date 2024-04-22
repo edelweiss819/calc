@@ -1,9 +1,24 @@
 import React from 'react';
 import Button from './Button';
 import styles from './MathOperation.module.css';
+import {useCalcDispatch} from '../module/CalcContext';
 
-function MathOperation() {
-	const mathOperation = ['÷', '×', '–', '+', ' ='];
+function MathOperation(props) {
+	const mathOperation = ['÷', '×', '–', '+'];
+	const dispatch = useCalcDispatch();
+
+	const handleOperator = (operator) => {
+		dispatch({
+			type: 'add-operator',
+			operator: operator,
+		});
+	};
+	const handleTotal = () => {
+		dispatch({
+			type: 'total',
+		});
+	};
+
 	return (
 		<div className={styles.mathOperationGrid}>
 			{mathOperation.map((operator) => {
@@ -11,6 +26,7 @@ function MathOperation() {
 					<Button
 						key={operator}
 						children={operator}
+						onClick={() => handleOperator(operator)}
 						style={{
 							backgroundColor: `var(--blue)`,
 							...(operator === '÷' && {gridArea: '1 / 1 / 2 / 2'}),
@@ -22,6 +38,13 @@ function MathOperation() {
 					/>
 				);
 			})}
+			<Button key={'='}
+					onClick={handleTotal}
+					style={{
+						backgroundColor: `var(--blue)`,
+						gridArea: '5 / 1 / 6 / 2',
+					}}>=
+			</Button>
 		</div>
 	);
 }

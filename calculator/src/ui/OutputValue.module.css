@@ -1,17 +1,26 @@
 .OutputValue {
-    /*margin-bottom: 1rem;*/
-    /*margin-left: -1rem;*/
     border: none;
     outline: none;
     cursor: none;
-    background-color: var(--dark-background);
-    color: var(--white);
     width: 20.938rem;
     height: 6rem;
+    padding-bottom: 1rem;
     /* Font */
     font-size: 6rem;
     font-weight: 300;
     letter-spacing: 0;
     text-align: right;
     line-height: 6rem;
+}
+
+/* решить пробелу с наследием из app */
+.dark-theme {
+
+    background-color: var(--dark-background);
+    color: var(--white);
+}
+
+.light-theme {
+    background-color: var(--gray);
+    color: var(--black);
 }
