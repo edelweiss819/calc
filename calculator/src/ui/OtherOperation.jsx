@@ -1,9 +1,12 @@
 import React from 'react';
+import {useCalcDispatch} from '../module/CalcContext';
+import {useTheme} from '../module/ThemeContext';
 import Button from './Button';
 import styles from './OtherOperation.module.css';
-import {useCalcDispatch} from '../module/CalcContext';
 import ChangeSign from '../assets/svg/ChangeSign';
-import {useTheme} from '../components/ThemeContext';
+import ChangeSignDark from '../assets/svg/ChangeSignDark';
+
+
 
 function OtherOperation() {
 	const dispatch = useCalcDispatch();
@@ -53,7 +56,9 @@ function OtherOperation() {
 						color: themeColor,
 						gridArea: '1 / 2 / 2 / 3',
 					}}>
-				<ChangeSign/>
+				{theme === 'dark'?
+					( <ChangeSign/>) : (<ChangeSignDark />)}
+
 			</Button>
 		</div>
 	);

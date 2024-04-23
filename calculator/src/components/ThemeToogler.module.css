@@ -10,6 +10,17 @@
     margin-top: 1rem;
     margin-bottom: 3.313rem;
 }
+.form__lightTheme{
+    background-color: var(--white);
+    width: 4.5rem;
+    height: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 3.313rem;
+}
 
 .circle {
     width: 1.5rem;
@@ -19,3 +30,11 @@
     float: left;
 
 }
+.circle__lightTheme {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--light-gray);
+    border-radius: 50%;
+    float: right;
+}
+

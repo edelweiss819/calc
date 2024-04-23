@@ -3,7 +3,8 @@ import Button from './Button.jsx';
 import styles from './NumberButtonsField.module.css';
 import {useCalcDispatch} from '../module/CalcContext';
 import DeleteIcon from '../assets/svg/DeleteIcon';
-import {useTheme, useThemeDispatch} from '../components/ThemeContext';
+import {useTheme, useThemeDispatch} from '../module/ThemeContext';
+import DeleteIconDark from '../assets/svg/DeleteIconDark';
 
 function NumberButtonsField(props) {
 	const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
@@ -67,6 +68,8 @@ function NumberButtonsField(props) {
 					gridArea: '4 / 1 / 5 / 2',
 				}}>.</Button>
 
+
+
 			<Button
 				key={'deleteIcon'}
 				onClick={handleDeleteLastValue}
@@ -75,7 +78,8 @@ function NumberButtonsField(props) {
 					color: themeColor,
 					gridArea: '4 / 3 / 5 / 4',
 				}}>
-				<DeleteIcon/>
+				{theme === "dark" ?
+				(<DeleteIcon/> ):( <DeleteIconDark/>) }
 			</Button>
 		</div>
 	);

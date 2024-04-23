@@ -3,7 +3,7 @@ import OtherOperation from '../ui/OtherOperation';
 import NumberButtonsField from '../ui/NumberButtonsField';
 import MathOperation from '../ui/MathOperation';
 import styles from './InputPanel.module.css';
-import {useTheme} from './ThemeContext';
+import {useTheme} from '../module/ThemeContext';
 
 function InputPanel(props) {
 	const theme = useTheme();

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import style from "./Wrapper.module.css"
-import {useTheme} from './ThemeContext';
+import {useTheme} from '../module/ThemeContext';
 
 function Wrapper(props) {
 	const theme = useTheme();

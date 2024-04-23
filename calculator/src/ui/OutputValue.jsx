@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import style from './OutputValue.module.css';
 import {CalcContext} from '../module/CalcContext';
-import {useTheme} from '../components/ThemeContext';
+import {useTheme} from '../module/ThemeContext';
 
 function OutputValue(prop) {
 	const calc = useContext(CalcContext);
